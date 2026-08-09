@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Code2, Trophy, Zap, ArrowRight, Github, Linkedin } from 'lucide-react';
+import { Code2, Trophy, Zap, ArrowRight, GitCommit, Briefcase } from 'lucide-react';
 import './Landing.css';
 
 export default function Landing() {
@@ -50,7 +50,7 @@ export default function Landing() {
 
           <div className="glass-panel feature-card">
             <div className="feature-icon-wrapper purple">
-              <Github size={24} />
+              <GitCommit size={24} />
             </div>
             <h3>Build Proof</h3>
             <p>Push your code to GitHub. Build a commit graph that recruiters love.</p>
@@ -58,7 +58,7 @@ export default function Landing() {
 
           <div className="glass-panel feature-card">
             <div className="feature-icon-wrapper green">
-              <Linkedin size={24} />
+              <Briefcase size={24} />
             </div>
             <h3>Get Visible</h3>
             <p>Share your learnings on LinkedIn. Build your personal brand.</p>

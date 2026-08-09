@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ChevronLeft, Github, Linkedin, CheckCircle, Send, ArrowRight } from 'lucide-react';
+import { ChevronLeft, GitCommit, Briefcase, CheckCircle, Send, ArrowRight } from 'lucide-react';
 import mockData from '../data/mockUser.json';
 import './ChallengeDay.css';
 
@@ -90,7 +90,7 @@ export default function ChallengeDay() {
           <form className="glass-panel submission-form" onSubmit={handleSubmit}>
             <div className="input-group">
               <label className="input-label" htmlFor="github">
-                <Github size={14} style={{ display: 'inline', marginRight: '4px' }} /> 
+                <GitCommit size={14} style={{ display: 'inline', marginRight: '4px' }} /> 
                 GitHub Commit / Repo URL
               </label>
               <input 
@@ -106,7 +106,7 @@ export default function ChallengeDay() {
 
             <div className="input-group">
               <label className="input-label" htmlFor="linkedin">
-                <Linkedin size={14} style={{ display: 'inline', marginRight: '4px' }} /> 
+                <Briefcase size={14} style={{ display: 'inline', marginRight: '4px' }} /> 
                 LinkedIn Post URL
               </label>
               <input 
