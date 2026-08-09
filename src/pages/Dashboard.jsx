@@ -39,8 +39,10 @@ export default function Dashboard() {
         <div className="dashboard-bento">
           {/* Streak Card - Top Left */}
           <section className="card bento-streak">
-            <div className="streak-value">{user.streak}</div>
-            <div className="streak-label">Day Streak</div>
+            <div className="streak-text-content">
+              <div className="streak-value">{user.streak}</div>
+              <div className="streak-label">Day Streak</div>
+            </div>
             <div className="streak-ring-container">
               <svg viewBox="0 0 36 36" className="streak-ring">
                 <path className="ring-bg"
