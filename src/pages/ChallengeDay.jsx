@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import { ChevronLeft, GitCommit, Briefcase, CheckCircle, Send, ArrowRight } from 'lucide-react';
+import { ChevronLeft, GitCommit, Briefcase, Check, ArrowRight } from 'lucide-react';
 import mockData from '../data/mockUser.json';
 import './ChallengeDay.css';
 
@@ -14,7 +14,6 @@ export default function ChallengeDay() {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccess, setIsSuccess] = useState(false);
 
-  // If we try to access a day other than today for demo purposes, just use today's task data
   const task = todayTask;
 
   const handleSubmit = (e) => {
@@ -22,29 +21,27 @@ export default function ChallengeDay() {
     if (!githubUrl || !linkedinUrl) return;
     
     setIsSubmitting(true);
-    // Simulate network request
     setTimeout(() => {
       setIsSubmitting(false);
       setIsSuccess(true);
-    }, 1500);
+    }, 1200);
   };
 
   if (isSuccess) {
     return (
       <div className="success-container animate-fade-in">
-        <div className="success-content glass-panel">
+        <div className="success-content">
           <div className="success-icon">
-            <CheckCircle size={64} color="#10b981" />
+            <Check size={48} />
           </div>
-          <h2>Proof Accepted!</h2>
+          <h2>Proof Accepted</h2>
           <p>Day {dayId} completed. Your streak is safe.</p>
           <div className="streak-update">
-            <span className="flame">🔥</span>
             <span className="streak-number">12</span>
-            <span className="streak-text">Day Streak</span>
+            <span className="streak-text">Days</span>
           </div>
-          <button className="btn btn-primary return-btn" onClick={() => navigate('/dashboard')}>
-            Back to Dashboard <ArrowRight size={16} style={{ marginLeft: '8px' }} />
+          <button className="btn btn-secondary return-btn" onClick={() => navigate('/dashboard')}>
+            Back to Workspace
           </button>
         </div>
       </div>
@@ -53,45 +50,45 @@ export default function ChallengeDay() {
 
   return (
     <div className="challenge-container">
-      <nav className="glass-nav challenge-nav">
+      <nav className="minimal-nav challenge-nav">
         <button className="back-btn" onClick={() => navigate('/dashboard')}>
-          <ChevronLeft size={20} />
-          <span>Dashboard</span>
+          <ChevronLeft size={16} />
+          <span>Workspace</span>
         </button>
         <div className="day-indicator">Day {dayId}</div>
       </nav>
 
       <main className="challenge-main animate-fade-in delay-100">
         <header className="task-header">
-          <div className="task-meta">
-            <span className="difficulty">{task.difficulty}</span>
-            <span className="points">{task.points} pts</span>
-          </div>
           <h1 className="task-title">{task.title}</h1>
+          <div className="task-meta">
+            <span className="badge outline">{task.difficulty}</span>
+            <span className="points-text">{task.points} points</span>
+          </div>
         </header>
 
-        <section className="task-details glass-panel">
-          <h2>The Assignment</h2>
-          <p>
+        <section className="task-details">
+          <p className="task-desc">
             Create a custom React hook `useLocalStorage` that syncs state to local storage so that it persists through a page refresh.
           </p>
-          <h3>Requirements:</h3>
-          <ul>
-            <li>Must handle initialization from existing local storage data.</li>
-            <li>Must update local storage whenever the state changes.</li>
-            <li>Should handle JSON parsing errors gracefully.</li>
-          </ul>
+          <div className="requirements card">
+            <h3>Requirements</h3>
+            <ul>
+              <li>Handle initialization from existing local storage data.</li>
+              <li>Update local storage whenever the state changes.</li>
+              <li>Handle JSON parsing errors gracefully.</li>
+            </ul>
+          </div>
         </section>
 
         <section className="submission-section">
           <h2>Submit Proof of Work</h2>
-          <p className="submission-desc">Drop your links below to maintain your streak.</p>
           
-          <form className="glass-panel submission-form" onSubmit={handleSubmit}>
+          <form className="submission-form" onSubmit={handleSubmit}>
             <div className="input-group">
               <label className="input-label" htmlFor="github">
-                <GitCommit size={14} style={{ display: 'inline', marginRight: '4px' }} /> 
-                GitHub Commit / Repo URL
+                <GitCommit size={14} style={{ display: 'inline', marginRight: '4px', verticalAlign: '-2px' }} /> 
+                GitHub Commit URL
               </label>
               <input 
                 type="url" 
@@ -106,14 +103,14 @@ export default function ChallengeDay() {
 
             <div className="input-group">
               <label className="input-label" htmlFor="linkedin">
-                <Briefcase size={14} style={{ display: 'inline', marginRight: '4px' }} /> 
+                <Briefcase size={14} style={{ display: 'inline', marginRight: '4px', verticalAlign: '-2px' }} /> 
                 LinkedIn Post URL
               </label>
               <input 
                 type="url" 
                 id="linkedin"
                 className="input-field" 
-                placeholder="https://linkedin.com/posts/..." 
+                placeholder="https://linkedin.com/..." 
                 value={linkedinUrl}
                 onChange={(e) => setLinkedinUrl(e.target.value)}
                 required
@@ -128,7 +125,7 @@ export default function ChallengeDay() {
               {isSubmitting ? (
                 <span className="loading-spinner"></span>
               ) : (
-                <>Submit Proof <Send size={16} style={{ marginLeft: '8px' }} /></>
+                <>Submit <ArrowRight size={14} style={{ marginLeft: '6px' }} /></>
               )}
             </button>
           </form>

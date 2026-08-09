@@ -1,6 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Code2, Trophy, Zap, ArrowRight, GitCommit, Briefcase } from 'lucide-react';
+import { Code2, GitCommit, Briefcase, ArrowRight, LayoutGrid, Terminal } from 'lucide-react';
 import './Landing.css';
 
 export default function Landing() {
@@ -8,13 +8,9 @@ export default function Landing() {
 
   return (
     <div className="landing-container">
-      {/* Background blobs for premium feel */}
-      <div className="blob blob-1"></div>
-      <div className="blob blob-2"></div>
-
-      <nav className="glass-nav landing-nav animate-fade-in">
+      <nav className="minimal-nav animate-fade-in">
         <div className="logo-container">
-          <Code2 className="logo-icon" size={24} />
+          <div className="logo-box"><Code2 size={16} /></div>
           <span className="logo-text">ABTalks</span>
         </div>
         <button className="btn btn-secondary nav-login" onClick={() => navigate('/dashboard')}>
@@ -24,60 +20,57 @@ export default function Landing() {
 
       <main className="landing-main">
         <header className="hero animate-fade-in delay-100">
-          <div className="badge">🚀 The 60-Day Coding Challenge</div>
+          <div className="status-badge">
+            <span className="status-dot"></span> Next cohort starts soon
+          </div>
           <h1 className="hero-title">
-            Build consistency. <br />
-            <span className="text-gradient">Get noticed.</span>
+            Build proof of work.<br />
+            <span className="text-dim">60 days at a time.</span>
           </h1>
           <p className="hero-subtitle">
-            Code every day. Commit to GitHub. Share on LinkedIn. <br/>
-            Join thousands of Indian students building their proof of work.
+            The platform for Indian college students to build consistency, ship daily, and get noticed by top recruiters.
           </p>
           
           <button className="btn btn-primary cta-btn" onClick={() => navigate('/dashboard')}>
-            Start Your Journey <ArrowRight size={18} style={{ marginLeft: '8px' }} />
+            Start Challenge <ArrowRight size={16} style={{ marginLeft: '8px' }} />
           </button>
         </header>
 
-        <section className="features animate-fade-in delay-200">
-          <div className="glass-panel feature-card">
-            <div className="feature-icon-wrapper blue">
-              <Code2 size={24} />
-            </div>
+        <section className="bento-grid animate-fade-in delay-200">
+          <div className="card bento-item bento-large">
+            <div className="bento-icon"><Terminal size={20} /></div>
             <h3>Code Daily</h3>
-            <p>Get a real-world task every day for 60 days. No more tutorial hell.</p>
+            <p>Real-world tasks every day. Escape tutorial hell by actually building things.</p>
           </div>
 
-          <div className="glass-panel feature-card">
-            <div className="feature-icon-wrapper purple">
-              <GitCommit size={24} />
-            </div>
-            <h3>Build Proof</h3>
-            <p>Push your code to GitHub. Build a commit graph that recruiters love.</p>
+          <div className="card bento-item bento-medium">
+            <div className="bento-icon"><GitCommit size={20} /></div>
+            <h3>Commit</h3>
+            <p>Paint your GitHub graph green.</p>
           </div>
 
-          <div className="glass-panel feature-card">
-            <div className="feature-icon-wrapper green">
-              <Briefcase size={24} />
-            </div>
-            <h3>Get Visible</h3>
-            <p>Share your learnings on LinkedIn. Build your personal brand.</p>
+          <div className="card bento-item bento-medium">
+            <div className="bento-icon"><Briefcase size={20} /></div>
+            <h3>Share</h3>
+            <p>Build your brand on LinkedIn.</p>
           </div>
-        </section>
-
-        <section className="social-proof animate-fade-in delay-300">
-          <div className="glass-panel stats-panel">
-            <div className="stat">
-              <span className="stat-value">10k+</span>
-              <span className="stat-label">Students</span>
-            </div>
-            <div className="stat">
-              <span className="stat-value">60</span>
-              <span className="stat-label">Days</span>
-            </div>
-            <div className="stat">
-              <span className="stat-value">1</span>
-              <span className="stat-label">Goal</span>
+          
+          <div className="card bento-item bento-wide">
+            <div className="bento-stats">
+              <div className="stat-group">
+                <h4>10k+</h4>
+                <span>Builders</span>
+              </div>
+              <div className="stat-divider"></div>
+              <div className="stat-group">
+                <h4>60</h4>
+                <span>Days</span>
+              </div>
+              <div className="stat-divider"></div>
+              <div className="stat-group">
+                <h4>1</h4>
+                <span>Goal</span>
+              </div>
             </div>
           </div>
         </section>
