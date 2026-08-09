@@ -1,16 +1,56 @@
-# React + Vite
+# ABTalks - 60-Day Coding Challenge Platform
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+![ABTalks Platform Redesign](https://img.shields.io/badge/Status-Completed-success?style=for-the-badge)
+![Tech Stack](https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB)
+![Vite](https://img.shields.io/badge/vite-%23646CFF.svg?style=for-the-badge&logo=vite&logoColor=white)
 
-Currently, two official plugins are available:
+A reimagined web platform for the **ABTalks 60-Day Coding Challenge**, designed specifically for Indian college students to build consistency, ship daily, and gain visibility with top recruiters.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 The Mission
 
-## React Compiler
+Students pick a track, build something every day, and maintain a public learning streak by submitting a **GitHub commit** and a **LinkedIn post**. This daily proof of work helps them escape tutorial hell and actually build things.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## ✨ Features
 
-## Expanding the Oxlint configuration
+- **Premium UI/UX Overhaul**: A stunning, sleek, minimalist dark mode aesthetic (`#000000` pitch black) inspired by top developer tools (Vercel, Linear).
+- **Responsive Bento Grid Layout**: Highly structured content that spans beautifully up to 1400px on desktop while maintaining a perfect app-like experience on mobile (390px).
+- **Student Dashboard**: A personalized workspace featuring a 60-day visual Journey Map and an intuitive animated Streak Tracker.
+- **Challenge Day View**: A distraction-free, editor-like submission form allowing students to submit their daily proof of work seamlessly.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+## 🛠️ Technology Stack
+
+- **Framework**: React (Bootstrapped with Vite)
+- **Styling**: Vanilla CSS (CSS Modules & Global Variables)
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+
+## 📦 Running Locally
+
+To run this project on your local machine, follow these steps:
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/dasouvik122005/Onyxcoder.git
+   cd Onyxcoder
+   ```
+
+2. **Install dependencies**
+   ```bash
+   npm install
+   ```
+
+3. **Start the development server**
+   ```bash
+   npm run dev
+   ```
+
+4. Open your browser and navigate to `http://localhost:5173`.
+
+## 🌐 Deployment
+
+This project is fully optimized for zero-config deployment on **Vercel**. 
+Simply import the GitHub repository into your Vercel dashboard, and the Vite configuration will handle the rest automatically!
+
+## 🤖 AI Collaboration
+
+This redesign was built in collaboration with an Agentic AI Coding Assistant. The step-by-step prompts, workflow, and architectural decisions are thoroughly documented in the `PROMPTS.md` file included in this repository.
