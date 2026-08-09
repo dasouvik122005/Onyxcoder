@@ -1,0 +1,248 @@
+.challenge-container {
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+.challenge-nav {
+  display: flex;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.back-btn {
+  display: flex;
+  align-items: center;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  cursor: pointer;
+  padding: 0;
+  transition: color 0.2s;
+}
+
+.back-btn:hover {
+  color: var(--text-primary);
+}
+
+.day-indicator {
+  margin-left: auto;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: var(--accent);
+}
+
+.challenge-main {
+  max-width: 390px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (min-width: 768px) {
+  .challenge-main {
+    max-width: 600px;
+  }
+}
+
+.task-header {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.task-meta {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.difficulty {
+  color: #fbbf24;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.points {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+.task-title {
+  font-size: 1.75rem;
+  line-height: 1.2;
+}
+
+.task-details {
+  padding: 1.5rem;
+}
+
+.task-details h2 {
+  font-size: 1.125rem;
+  margin-bottom: 0.75rem;
+  color: var(--accent);
+}
+
+.task-details p {
+  color: var(--text-primary);
+  line-height: 1.6;
+  font-size: 0.9375rem;
+  margin-bottom: 1.5rem;
+}
+
+.task-details h3 {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  margin-bottom: 0.75rem;
+}
+
+.task-details ul {
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.task-details li {
+  position: relative;
+  padding-left: 1.25rem;
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.5;
+}
+
+.task-details li::before {
+  content: "•";
+  color: var(--accent);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.submission-section h2 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.submission-desc {
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 1.25rem;
+}
+
+.submission-form {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.submit-btn {
+  margin-top: 1rem;
+  width: 100%;
+  padding: 1rem;
+}
+
+.submit-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+/* Loading Spinner */
+.loading-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 50%;
+  border-top-color: white;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Success State */
+.success-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.success-content {
+  width: 100%;
+  max-width: 390px;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.success-icon {
+  animation: bounceScale 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275) forwards;
+}
+
+@keyframes bounceScale {
+  0% { transform: scale(0); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.success-content h2 {
+  font-size: 1.75rem;
+  color: var(--text-primary);
+}
+
+.success-content p {
+  color: var(--text-secondary);
+  font-size: 0.9375rem;
+}
+
+.streak-update {
+  margin: 1.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: rgba(249, 115, 22, 0.1);
+  border: 2px solid rgba(249, 115, 22, 0.3);
+  box-shadow: 0 0 30px rgba(249, 115, 22, 0.2);
+}
+
+.flame {
+  font-size: 1.5rem;
+  margin-bottom: -0.25rem;
+}
+
+.streak-number {
+  font-size: 2.5rem;
+  font-weight: 800;
+  color: #f97316;
+  line-height: 1;
+}
+
+.streak-text {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-top: 0.25rem;
+}
+
+.return-btn {
+  width: 100%;
+  margin-top: 1rem;
+}

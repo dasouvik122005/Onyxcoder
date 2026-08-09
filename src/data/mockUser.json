@@ -1,0 +1,34 @@
+{
+  "user": {
+    "name": "Rahul Sharma",
+    "avatar": "https://i.pravatar.cc/150?u=rahul",
+    "streak": 11,
+    "completedDays": 11,
+    "totalDays": 60,
+    "standing": "Top 5%",
+    "badges": ["Week 1 Warrior", "Early Bird"],
+    "missedDay": false,
+    "gracePeriodActive": true
+  },
+  "todayTask": {
+    "day": 12,
+    "title": "Build a Custom React Hook for Local Storage",
+    "difficulty": "Medium",
+    "points": 50,
+    "dueDate": "Today, 2:00 AM"
+  },
+  "journey": [
+    { "day": 1, "status": "completed" },
+    { "day": 2, "status": "completed" },
+    { "day": 3, "status": "completed" },
+    { "day": 4, "status": "completed" },
+    { "day": 5, "status": "completed" },
+    { "day": 6, "status": "completed" },
+    { "day": 7, "status": "completed" },
+    { "day": 8, "status": "completed" },
+    { "day": 9, "status": "completed" },
+    { "day": 10, "status": "completed" },
+    { "day": 11, "status": "completed" },
+    { "day": 12, "status": "current" }
+  ]
+}
